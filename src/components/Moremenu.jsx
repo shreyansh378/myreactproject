@@ -37,7 +37,7 @@ const MenuPage = () => {
 
         <div className="bg-white rounded-xl shadow-lg p-4 hover:scale-105 transition">
           <img
-            src="/food2.jpeg"
+            src="/imageeee.jpg"
             alt="Food 2"
             className="w-full h-40 object-cover rounded-lg mb-3"
           />
