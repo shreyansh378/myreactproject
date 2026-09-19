@@ -1,1 +1,374 @@
 @import "tailwindcss";
+
+/* ================================
+   GLOBAL RESPONSIVE RESET
+================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Images should never overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons and links */
+button,
+a {
+  max-width: 100%;
+}
+
+/* ================================
+   DESKTOP DEFAULT
+================================ */
+
+h1 {
+  line-height: 1.15;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ================================
+   TABLET
+   601px - 1024px
+================================ */
+
+@media (max-width: 1024px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Navigation */
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  /* Main sections */
+  section {
+    max-width: 100%;
+  }
+
+  /* Hero */
+  .hero {
+    width: 100%;
+    min-height: 450px;
+    padding: 60px 30px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  /* Cards */
+  .cards,
+  .card-container,
+  .features,
+  .services {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ================================
+   MOBILE
+   600px AND BELOW
+================================ */
+
+@media (max-width: 600px) {
+
+  /* ---------- GLOBAL ---------- */
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  /* ---------- HEADINGS ---------- */
+
+  h1 {
+    font-size: 30px !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 26px !important;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 20px !important;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+
+  /* ---------- NAVBAR ---------- */
+
+  nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 16px !important;
+    overflow: hidden;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    width: 100%;
+    min-height: auto !important;
+    padding: 55px 16px !important;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 30px !important;
+    margin-bottom: 15px;
+  }
+
+  .hero p {
+    width: 100%;
+    max-width: 500px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  /* ---------- HERO BUTTONS ---------- */
+
+  .hero-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+
+  /* ---------- SECTIONS ---------- */
+
+  section {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+
+  /* ---------- CARDS ---------- */
+
+  .cards,
+  .card-container,
+  .features,
+  .services {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* ---------- WHY CHOOSE US ---------- */
+
+  .why-choose-us {
+    width: 100%;
+    padding: 35px 16px;
+  }
+
+  .why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .why-choose-us .cards {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+
+  /* ---------- SERVICE SECTION ---------- */
+
+  .service-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+
+  /* ---------- BUTTONS ---------- */
+
+  button {
+    font-size: 14px;
+    min-height: 42px;
+    padding: 10px 18px;
+  }
+
+
+  /* ---------- FORMS ---------- */
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 16px;
+  }
+
+  footer .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  /* ---------- PREVENT OVERFLOW ---------- */
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+
+/* ================================
+   SMALL MOBILE
+   400px AND BELOW
+================================ */
+
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: 27px !important;
+  }
+
+  h2 {
+    font-size: 23px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  .hero {
+    padding: 45px 12px !important;
+  }
+
+  section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  button,
+  .hero-buttons button,
+  .hero-buttons a {
+    width: 100%;
+    max-width: 230px;
+  }
+}
